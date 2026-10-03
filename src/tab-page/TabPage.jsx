@@ -6,7 +6,7 @@ import { Redirect } from 'react-router';
 
 import Footer from '@edx/frontend-component-footer';
 import { Toast } from '@edx/paragon';
-import { LearningHeader as Header } from '@edx/frontend-component-header';
+import Header from '../generic/telacad-header';
 import PageLoading from '../generic/PageLoading';
 import { getAccessDeniedRedirectUrl } from '../shared/access';
 import { useModel } from '../generic/model-store';

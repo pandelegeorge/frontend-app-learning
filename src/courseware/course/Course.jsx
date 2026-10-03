@@ -8,6 +8,7 @@ import { breakpoints, useWindowSize } from '@edx/paragon';
 import { AlertList } from '../../generic/user-messages';
 
 import Sequence from './sequence';
+import CourseOutlineSidebar from './outline-sidebar';
 
 import { CelebrationModal, shouldCelebrateOnSectionLoad, WeeklyGoalCelebrationModal } from './celebration';
 import ContentTools from './content-tools';
@@ -104,6 +105,9 @@ function Course({
       </div>
 
       <AlertList topic="sequence" />
+      <div className="d-flex align-items-stretch">
+        <CourseOutlineSidebar courseId={courseId} sequenceId={sequenceId} />
+        <div className="flex-grow-1" style={{ minWidth: 0 }}>
       <Sequence
         unitId={unitId}
         sequenceId={sequenceId}
@@ -114,6 +118,8 @@ function Course({
         //* * [MM-P2P] Experiment */
         mmp2p={MMP2P}
       />
+        </div>
+      </div>
       <CelebrationModal
         courseId={courseId}
         isOpen={firstSectionCelebrationOpen}
